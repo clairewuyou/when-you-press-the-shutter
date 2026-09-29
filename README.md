@@ -1,4 +1,4 @@
-# BECOMING A MICROSCOPE TO CREATE NEW SECRETS
+# WHEN YOU PRESS THE SHUTTER
 
 Process documentation for a graduate typography project — a single-page site built with vanilla HTML, CSS, and p5.js.
 
