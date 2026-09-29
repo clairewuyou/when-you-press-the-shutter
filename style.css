@@ -30,7 +30,7 @@ header {
 header h1 {
   margin: 0;
   font-size: clamp(20px, 2.4vw, 40px);
-  font-weight: 800;
+  font-weight: 300;
   line-height: 1.15;
   letter-spacing: 0.02em;
 }
