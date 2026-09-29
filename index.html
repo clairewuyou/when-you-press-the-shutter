@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BECOMING A MICROSCOPE TO CREATE NEW SECRETS — Process</title>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="p5.min.js"></script>
+  <script src="p5.svgkit.js"></script>
+  <script src="manifest.js"></script>
+  <script src="sketch.js"></script>
+</head>
+<body>
+  <header>
+    <h1>BECOMING A MICROSCOPE<br>TO CREATE NEW SECRETS</h1>
+  </header>
+
+  <main>
+    <aside id="thumbs"></aside>
+
+    <section id="viewer-col">
+      <div id="canvas-holder"></div>
+      <div id="copy">
+        <p>This assignment made me rethink the possibilities of visualization. When I design, I rarely sketch with a pen on paper; I usually start directly using various software applications on my computer. Even though I’m very good at drawing, I still feel a bit lost when faced with highly abstract concepts and a multitude of adjectives that describe specific visual elements. Sometimes, after spending several hours on it, I find it difficult to come up with new ideas. It was precisely during this process that I continually pushed my thinking into new directions, no longer sticking to any single idea. In both Method A and Method B, I constantly rearranged the patterns I had drawn. Even though these five adjectives were very different, the rearranged patterns produced incredible visual effects. I kept trying and experimenting, encountering moments of confusion and stagnation, as well as moments brimming with inspiration and discovery. When I use these patterns to convey certain feelings, I realize just how important it is to communicate effectively without written explanations.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p id="status">Loading&hellip;</p>
+  </footer>
+
+  <script>
+    (function () {
+      var problems = [];
+      function flush() {
+        var s = document.getElementById('status');
+        if (s && problems.length) s.textContent = 'ERROR: ' + problems.join(' | ');
+      }
+      window.addEventListener('error', function (e) {
+        problems.push(e.message || 'script error');
+        flush();
+      });
+      window.addEventListener('unhandledrejection', function (e) {
+        var r = e.reason;
+        problems.push('async: ' + (r && r.message ? r.message : r));
+        flush();
+      });
+      setTimeout(function () {
+        if (typeof p5 === 'undefined') problems.push('p5.min.js did not load');
+        if (typeof svgkit === 'undefined') problems.push('p5.svgkit.js did not load');
+        if (typeof MANIFEST === 'undefined') problems.push('manifest.js did not load');
+        flush();
+      }, 2500);
+    })();
+  </script>
+</body>
+</html>

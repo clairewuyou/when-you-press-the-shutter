@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  background: #f7f6f2;
+  color: #161616;
+}
+
+/* ---------- header: 15% of window height, left aligned ---------- */
+
+header {
+  height: 15vh;
+  flex: 0 0 15vh;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(20px, 2.4vw, 40px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- main: two columns ---------- */
+
+main {
+  height: 80vh;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0 5vw;
+  display: flex;
+  gap: 2vw;
+}
+
+/* left column: thumbnails, 25% of window width */
+
+#thumbs {
+  flex: 0 0 25vw;
+  width: 25vw;
+  min-height: 0;
+  overflow-y: auto;
+  padding-bottom: 2vh;
+}
+
+#thumbs h2 {
+  margin: 0;
+  padding: 1.4vh 0 0.8vh;
+  border-top: 1px solid #c9c5ba;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  position: sticky;
+  top: 0;
+  background: #f7f6f2;
+}
+
+#thumbs h3 {
+  margin: 0;
+  padding: 1vh 0 0.5vh;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+}
+
+#thumbs .group:first-child h2,
+#thumbs .group:first-child h3 {
+  border-top: none;
+  padding-top: 0;
+}
+
+.thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
+  gap: 8px;
+}
+
+.thumb {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #d8d4c8;
+  background: #ffffff;
+  cursor: pointer;
+  font: inherit;
+}
+
+.thumb img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+}
+
+.thumb:hover {
+  border-color: #8f8a7c;
+}
+
+.thumb.active {
+  border-color: #161616;
+  outline: 2px solid #161616;
+  outline-offset: -2px;
+}
+
+/* right column: main viewing area + documentation copy */
+
+#viewer-col {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6vh;
+  overflow-y: auto;
+  padding-bottom: 2vh;
+}
+
+#canvas-holder {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 50vh;
+  border: 1px solid #c9c5ba;
+  background: #ffffff;
+}
+
+#canvas-holder canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#copy {
+  flex: 0 0 auto;
+  max-width: 62ch;
+}
+
+#copy p {
+  margin: 0 0 0.9em;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* ---------- footer: 5% of window height ---------- */
+
+footer {
+  height: 5vh;
+  flex: 0 0 5vh;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #c9c5ba;
+  background: #f1efe8;
+}
+
+footer p {
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: #6f6a5e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
