@@ -13,8 +13,8 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Encode Sans Semi Expanded', sans-serif;
-  background: #f7f6f2;
-  color: #161616;
+  background: #000000;
+  color: #ffffff;
 }
 
 /* ---------- header: 15% of window height, left aligned ---------- */
@@ -59,14 +59,14 @@ main {
 #thumbs h2 {
   margin: 0;
   padding: 1.4vh 0 0.8vh;
-  border-top: 1px solid #c9c5ba;
+  border-top: 1px solid #333333;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   position: sticky;
   top: 0;
-  background: #f7f6f2;
+  background: #000000;
 }
 
 #thumbs h3 {
@@ -93,7 +93,7 @@ main {
 .thumb {
   margin: 0;
   padding: 0;
-  border: 1px solid #d8d4c8;
+  border: 1px solid #3a3a3a;
   background: #ffffff;
   cursor: pointer;
   font: inherit;
@@ -107,12 +107,12 @@ main {
 }
 
 .thumb:hover {
-  border-color: #8f8a7c;
+  border-color: #9a9a9a;
 }
 
 .thumb.active {
-  border-color: #161616;
-  outline: 2px solid #161616;
+  border-color: #ffffff;
+  outline: 2px solid #ffffff;
   outline-offset: -2px;
 }
 
@@ -133,7 +133,7 @@ main {
   position: relative;
   flex: 1 1 auto;
   min-height: 50vh;
-  border: 1px solid #c9c5ba;
+  border: 1px solid #333333;
   background: #ffffff;
 }
 
@@ -163,15 +163,15 @@ footer {
   padding: 0 5vw;
   display: flex;
   align-items: center;
-  border-top: 1px solid #c9c5ba;
-  background: #f1efe8;
+  border-top: 1px solid #333333;
+  background: #000000;
 }
 
 footer p {
   margin: 0;
   font-size: 10px;
   letter-spacing: 0.04em;
-  color: #6f6a5e;
+  color: #9a9a9a;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
